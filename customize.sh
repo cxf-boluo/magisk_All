@@ -41,7 +41,7 @@ chooseport() {
   done
 }
 
-check_apk(){
+check_apk() {
 results=$(pm list packages -3 | cut -d':' -f2)
 for i in $results
 do
@@ -103,7 +103,23 @@ config_dir=/sdcard/magisk_hook
 echo "hello"  >> $config_dir/hook_config.txt
 ui_print "安装应用"
 
-check_apk "bin.mt.plus"
+# check_apk "bin.mt.plus"
+results = ("bin.mt.plus","2")
+for i in $results
+do
+    pag_name = $i
+    res=$(pm list packages -3 | cut -d':' -f2 |grep $pag_name)
+    if [ $res == $pag_name ]; then
+      echo "$pag_name 存在，不用安装 "
+      
+    else
+      echo "$pag_name is NULL"
+      pm install $MODPATH/apks/$pag_name.apk
+    fi
+        
+done
+
+
     # ui_print $i
     # if [ $i == "bin.mt.plus" ]
     # then
