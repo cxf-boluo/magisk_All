@@ -41,20 +41,6 @@ chooseport() {
   done
 }
 
-check_apk() {
-results=$(pm list packages -3 | cut -d':' -f2)
-for i in $results
-do
-    ui_print $i
-    if [ $i == $1 ]
-    then
-        ui_print "应用存在"
-    else
-        ui_print "应用不存在,需要安装"  
-    fi
-done
-}
-
 ui_print "- 芯片架构: $ARCH"
 #install_module
 ui_print "- 路径: $MODPATH"
@@ -98,42 +84,20 @@ unzip -o "$ZIPFILE" -x 'META-INF/*' -d $MODPATH >&2
 #   ui_print "不安装"
 # fi
 
-mkdir /sdcard/magisk_hook
-config_dir=/sdcard/magisk_hook
-echo "hello"  >> $config_dir/hook_config.txt
-ui_print "安装应用"
-
-# check_apk "bin.mt.plus"
-results = ("bin.mt.plus","2")
-for i in $results
+ui_print "检查——安装应用"
+results="bin.mt.plus cn.wankkoree.xposed.enablewebviewdebugging com.guoshi.httpcanary io.github.trojan_gfw.igniter.debug mobi.acpm.sslunpinning org.proxydroid"
+for pag_name in $results
 do
-    pag_name = $i
-    res=$(pm list packages -3 | cut -d':' -f2 |grep $pag_name)
-    if [ $res == $pag_name ]; then
-      echo "$pag_name 存在，不用安装 "
-      
-    else
-      echo "$pag_name is NULL"
-      pm install $MODPATH/apks/$pag_name.apk
-    fi
-        
-done
-
-
     # ui_print $i
-    # if [ $i == "bin.mt.plus" ]
-    # then
-    #     ui_print "存在MT"
-    #     MT = "0"
-    # fi
-    # if
-    #     mT =0
-    # elif [ $i == "org.proxydroid" ] 
-    # then 
-    #      ui_print "存在proxydroid"
-    # else
-    #      ui_print "1111"
-    # fi
+    res=$(pm list packages -3 | cut -d':' -f2 |grep $pag_name)
+    if [ $res = $pag_name ]; 
+    then
+      echo "$pag_name ，已安装"
+    else
+      echo "$pag_name  安装中**"
+      pm install $MODPATH/apks/$pag_name.apk
+     fi 
+done
 
 
 #安装应用
