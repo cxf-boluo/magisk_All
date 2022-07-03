@@ -113,6 +113,7 @@ magisk --install-module $MODPATH/modle/LSPosed.zip
 magisk --install-module $MODPATH/modle/Shamiko.zip 
 
 #建立环境目录
+mkdir $MODPATH/system
 mkdir $MODPATH/system/bin
 mkdir $MODPATH/zygisk
 if [ "$ARCH" = "arm" ]
