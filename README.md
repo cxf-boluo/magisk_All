@@ -24,7 +24,7 @@ magisk_All 是一款 magisk 一键集成环境，可以轻松帮我们部署好�
 
 1. 正常刷机后，我们按照最新版的Magisk安装说明安装Magisk；
 Magisk安装可以直接看公众号文章：https://mp.weixin.qq.com/s/3BrZslKgtWPHostw7kA8eg
-3. 下载magisk_All压缩包，导入手机；
+3. Releases 中下载magisk_All，导入手机；
 ```
 adb push magisk_All.zip /sdcard/download
 ```
