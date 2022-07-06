@@ -107,7 +107,7 @@ done
 # pm install $MODPATH/apks/webview.apk
 # pm install $MODPATH/apks/MT.apk
 
-安装常用模块
+#安装常用模块
 ui_print "安装常用模块"
 magisk --install-module $MODPATH/modle/LSPosed.zip 
 magisk --install-module $MODPATH/modle/Shamiko.zip 
