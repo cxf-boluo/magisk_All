@@ -39,7 +39,7 @@ adb push magisk_All.zip /sdcard/download
 
 
 
-<img src="https://user-images.githubusercontent.com/86091961/177456748-24add050-1774-4e49-8cdf-e20fe81fe6f9.png" width=80%   />
+<img src="https://user-images.githubusercontent.com/86091961/177965978-e2999674-7752-4c8e-84c4-6f11ddbaa838.png" width=80%   />
 
 
 ## Licenses
