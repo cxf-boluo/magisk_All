@@ -1,6 +1,6 @@
 # magisk_All
 一键集成环境，再也不用每次刷完机繁琐的配置环境了！
-这是一个magisk模块刷入即可!
+这是一个magisk模块，刷入即可!
 
 ## 介绍
 
@@ -22,7 +22,7 @@ magisk_All 是一款 magisk 一键集成环境，可以轻松帮我们部署好�
 
 ## 安装教程
 
-1. 正常刷机后，我们按照最新版的Magisk安装说明安装Magisk；
+1. 正常刷机后，按照最新版的Magisk安装说明安装Magisk，注意本版本仅支持 Magisk Canary 27003及以上；
 Magisk安装可以直接看公众号文章：https://mp.weixin.qq.com/s/3BrZslKgtWPHostw7kA8eg
 2. Releases 中下载magisk_All，导入手机；
 ```
