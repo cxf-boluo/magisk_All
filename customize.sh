@@ -5,10 +5,10 @@ SKIPUNZIP=1
 ASH_STANDALONE=1
 setenforce  0
 check_magisk_version() {
-  ui_print "- Magisk version: $MAGISK_VER"
-  if [ "$MAGISK_VER_CODE" -lt 24000 ]; then
+  ui_print "- Magisk version: $MAGISK_VER_CODE"
+  if [ "$MAGISK_VER_CODE" -lt 27003 ]; then
     ui_print "*********************************************************"
-    ui_print "! Please install Magisk v24.0+ (24000+)"
+    ui_print "! Please install Magisk v27.0+ (27003+)"
     abort    "*********************************************************"
   fi
 }
