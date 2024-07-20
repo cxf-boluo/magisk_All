@@ -115,6 +115,9 @@ magisk --install-module $MODPATH/modle/Shamiko.zip
 #建立环境目录
 mkdir $MODPATH/system
 mkdir $MODPATH/system/bin
+mkdir $MODPATH/system/etc
+mkdir $MODPATH/system/etc/security
+mkdir $MODPATH/system/etc/security/cacerts
 mkdir $MODPATH/zygisk
 if [ "$ARCH" = "arm" ]
 then

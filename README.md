@@ -29,7 +29,8 @@ Magisk安装可以直接看公众号文章：https://mp.weixin.qq.com/s/3BrZslKg
 adb push magisk_All.zip /sdcard/download
 ```
 3. 按照Magisk安装模块步骤安装magisk_All即可，正常重启；
-4. Magisk中找到`设置—Zygisk`打开，同时打开遵守排除列表，重启后再关闭遵守排除列表即可。
+4. Magisk中找到`设置—Zygisk`打开，同时打开遵守排除列表，重启后再关闭遵守排除列表即可；
+5. 模块启动后，抓包证书从用户证书到系统目录下，需要再次重启手机，激活证书挂载功能。
 
 
 ## 联系我
